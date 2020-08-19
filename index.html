@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+  <title>
+  YOUR HAPPINESS SCORE
+  </title>
+  </head>
+  <body><center>
+    <h1>YOUR <BR>HAPPINESS<BR> SCORE TODAY</h1>
+      
+      <hr width="35%">
+      <table>
+        <tr>
+          <td>Sunlight</td>
+          <td>
+            <select id="sl">
+              <option>--Select--</option>
+              <option value="0" >No, I was busy</option>
+              <option value="2" >Less than 15 Min</option>
+              <option value="5">Less than 30 Min</option>
+              <option value="8">More than 45 Min</option>
+              <option value="10">More than 60 Min</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Exercise</td>
+          <td>
+            <select id="ex">
+              <option>--Select--</option>
+              <option value="0">No, I was busy</option>
+              <option value="2">Less than 15 Min</option>
+              <option value="5">Less than 30 Min</option>
+              <option value="8">More than 45 Min</option>
+              <option value="10">More than 60 Min</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>7-8 Hrs Sleep</td>
+          <td>
+            <select id="sleep">
+              <option>--Select--</option>
+              <option value="0">No, I was busy</option>
+              <option value="2">Less than 2HRS</option>
+              <option value="5">Less than 4HRS</option>
+              <option value="8">Less than 7HRS</option>
+              <option value="10">More than 7HRS</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Talk to an old friend</td>
+          <td>
+            <select id="frnd">
+              <option>--Select--</option>
+              <option value="0">No, I was busy</option>
+              <option value="2">Less than 15 Min</option>
+              <option value="5">Less than 30 Min</option>
+              <option value="8">More than 45 Min</option>
+              <option value="10">More than 60 Min</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Nature</td>
+          <td>
+            <select id="nat">
+              <option>--Select--</option>
+              <option value="0">No, I was busy</option>
+              <option value="2">Less than 15 Min</option>
+              <option value="5">Less than 30 Min</option>
+              <option value="8">More than 45 Min</option>
+              <option value="10">More than 60 Min</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Donate Something</td>
+          <td>
+           <select id="don">
+             <option>--Select--</option>
+              <option value="0">No, I was busy</option>
+              <option value="2">I don't have money</option>
+              <option value="5">I feed someone</option>
+              <option value="8">I gave money</option>
+              <option value="10">I have friend 😝</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Spend time with family</td>
+          <td>
+            <select id="fam">
+              <option>--Select--</option>
+              <option value="0">No, I was busy</option>
+              <option value="2">Less than 15 Min</option>
+              <option value="5">Less than 30 Min</option>
+              <option value="8">More than 45 Min</option>
+              <option value="10">More than 60 Min</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2><button onclick=fun()> Generate Bill</button>
+          </td>
+        </tr>
+      </table>
+      <hr width=25%>
+      
+      <p id="w"></p>
+       </center>
+	   <script>
+	   let sl,ex,sleep,frnd,nat,don,fam,r=0;
+function fun(){
+sl=parseInt(document.getElementById("sl").value)
+  
+ex=parseInt(document.getElementById("ex").value)
+sleep=parseInt(document.getElementById("sleep").value)
+frnd=parseInt(document.getElementById("frnd").value)
+nat=parseInt(document.getElementById("nat").value)
+don=parseInt(document.getElementById("don").value)
+fam=parseInt(document.getElementById("fam").value)
+r=sl+ex+sleep+frnd+nat+don+fam
+  
+if (r<25){
+  document.getElementById("w").innerHTML="Your score is "+r+" 🙄 you should spent more time with these activities"
+}
+else if(r<45){
+  document.getElementById("w").innerHTML="Your score is "+r+"  😍 you should spent more time with these activities keep it up"
+}
+else if(r>45) {
+   document.getElementById("w").innerHTML="Your score is "+r+"  😍Congratulations you are doing Greatttt!!! job"
+}
+else{
+   document.getElementById("w").innerHTML="Your score is "+r+"  😣 Please Select Any value😜"
+}
+}
+	   
+	   </script>
+      
+  </body>
+ </html>
